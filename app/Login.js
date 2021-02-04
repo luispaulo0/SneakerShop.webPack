@@ -22,8 +22,18 @@ class Login extends React.Component{
         }))
     }
 
-    validateUsername(e){
-        alert('Hola login')
+    usernameValidate(e){
+        let username = this.state.username
+        APIInvoker.invokeGET(`/users/usernameValidate/${username}`,
+            data => {
+                //Primera forma de obtener la referencia de un control en el DOM
+                //let label = document.getElementById('usernameMessage')
+                this.label.innerHTML = data.message
+            },
+            error => {
+                //let label = document.getElementById('usernameMessage')
+                this.label.innerHTML = error.message
+            })
     }
 
     render() {
@@ -40,16 +50,32 @@ class Login extends React.Component{
                             <form >
                                 <div className="mb-3">
                                     <label htmlFor="username" className="form-label">Nombre de usuario</label>
-                                    <input type="text" className="form-control" id="username" placeholder="alilopez" aria-describedby="usernameHelp" />
-                                    <div id="usernameHelp" className="form-text text-danger">
-                                        Ingrese un usuario válido
+                                    <input type="text"
+                                           className="form-control"
+                                           name="username"
+                                           id="username"
+                                           placeholder="alilopez"
+                                           aria-describedby="usernameHelp"
+                                           value={this.state.username}
+                                           onChange={this.changeField.bind(this)}
+                                           onBlur={this.usernameValidate.bind(this)}/>
+                                    <div id="usernameMessage"
+                                         ref={ self => this.label = self}
+                                         className="form-text text-white">
                                     </div>
                                 </div>
                                 <div className="py-3">
                                     <label htmlFor="password" className="form-label">Contraseña</label>
-                                    <input type="password" className="form-control" id="password" placeholder="1234" aria-describedby="passwordHelp"/>
-                                    <div id="passwordHelp" className="form-text text-danger">
-                                        Ingresar la contraseña
+                                    <input type="password"
+                                           className="form-control"
+                                           name="password"
+                                           id="password"
+                                           placeholder="1234"
+                                           aria-describedby="passwordHelp"
+                                           value={this.state.password}
+                                           onChange={this.changeField.bind(this)}/>
+                                    <div id="passwordHelp"
+                                         className="form-text text-danger">
                                     </div>
                                 </div>
                                 <div className="d-grid gap-3 py-3">
@@ -114,12 +140,6 @@ class Login extends React.Component{
         }, error => {
             alert(JSON.stringify(error))
         })
-        /* usernameValidate
-        APIInvoker.invokeGET(`/users/usernameValidate/${this.state.username}`, data => {
-            alert(JSON.stringify(data))
-        }, error => {
-            alert(JSON.stringify(error))
-        })*/
         e.preventDefault();
     }
 }
