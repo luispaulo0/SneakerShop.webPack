@@ -1,14 +1,44 @@
-.box-login {
-    background-color: #5B6064;
-    color: white;
+
+
+.label-Usuario {
+    color: aquamarine;
+}
+.container-box{
+    background-color: antiquewhite;
+}
+.container-components{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 0 auto;
+}
+.h1{
+    text-align:center;
+    margin: 0 auto 5px auto;
 }
 
-#img-login {
-    width: 30%;
+.form{
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7px;
+    border: 2px solid #131313;
+    width: 450px;
+    background-color: #ffff;
 }
-
-#container-login {
-    border: red solid 1px;
-    background-color: #474672;
-    color: white;
+.label{
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+    text-align: -webkit-left;
+    margin: 10px 10px 10px 10px;
+}
+#button-inicio{
+    margin-bottom: auto;
+    background-color: #131313;
+    border-color: #131313;
+    border-radius: 5px;
+    color: #ffff;
+}
+.input{
+    border-radius: 5px;
+    border: 1px solid #131313;
 }
