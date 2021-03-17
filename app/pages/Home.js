@@ -15,30 +15,30 @@ class Home extends React.Component{
         this.data = [
             {
                 img:img1,
-                title: 'Croods 2',
-                description: 'Película animada de Pixar'
+                title: 'Nike Air Max 2090 EOI',
+                description: '$3300'
             },
             {
                 img:img2,
-                title: 'Capitán américa',
-                description: 'Película de superheroes'
+                title: 'Nike Air Max VG-R',
+                description: '$2000'
             },
             {
                 img:img3,
-                title: 'Thor',
-                description: 'Película de marvel'
+                title: 'Nike Cosmic Unity "Amalgam"',
+                description: '$3399'
             },{
                 img:img4,
-                title: 'Capitán américa',
-                description: 'Película de superheroes'
+                title: 'tennis lite racer 2.0',
+                description: '$1200'
             },{
                 img:img5,
-                title: 'Capitán américa',
-                description: 'Película de superheroes'
+                title: 'Tennis grand court base',
+                description: '$2000'
             },{
                 img:img6,
                 title: 'Tennis ultra boost-21',
-                description: 'corre con huevos $1800'
+                description: '$1800'
             }
         ]
     }
