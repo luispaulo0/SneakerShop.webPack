@@ -14,7 +14,9 @@ class Header extends React.Component{
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link active text-light" aria-current="page" href="#">Home</a>
+                                    <Link className="dropdown-item" to='/'>
+                                        <h4 className="text-light">Home</h4>
+                                    </Link>
                                 </li>
                                 <div className="btn-group " role="group" aria-label="Basic example">
                                     <div class="dropdown">
@@ -76,9 +78,16 @@ class Header extends React.Component{
                                 </ul>
                             </div>
                             <button type="button" className="btn btn-dark">
-                                <img src={corazonIcono} alt="" width="30" height="24"/>
+                                <Link className="dropdown-item" to='/WishList'>
+                                    <img src={corazonIcono} alt="" width="30" height="24"/>
+                                </Link>
                             </button>
-                                <img src={carritoIcono} alt="" width="30" height="24"/>
+                            <button type="button" className="btn btn-dark">
+                                <Link className="dropdown-item" to='/ShoppingCar'>
+                                    <img src={carritoIcono} alt="" width="30" height="24"/>
+                                </Link>
+                            </button>
+
                         </div>
                     </div>
                 </nav>
