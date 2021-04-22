@@ -61,10 +61,10 @@ class Login extends React.Component{
 
     render() {
         return(
-            <div className="container-box">
+            <div >
                 <div >
                     <h1 className="h1">SneakerShop</h1>
-                    <form className="form">
+                    <form className="form" id="container-box">
                         <label className="label" htmlFor="username" >Usuario</label>
                         <br/>
                         <input
