@@ -1,6 +1,8 @@
 import React from 'react'
 import update from 'immutability-helper'
 import APIInvoker from "../utils/APIInvoker";
+import carritoIcono from "../assets/icons/cart-outline.svg";
+import {Link} from "react-router-dom";
 
 
 class Login extends React.Component{
@@ -64,7 +66,16 @@ class Login extends React.Component{
             <div >
                 <div >
                     <h1 className="h1">SneakerShop</h1>
+
                     <form className="form" id="container-box">
+                        <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button className="btn btn-dark btn-sm me-md-2" type="button" id="button-skip">
+                                <Link className="dropdown-item" to='/'>
+                                <p className="text-center text-white">Skip</p>
+                                 </Link>
+                            </button>
+                        </div>
+                        <br/>
                         <label className="label" htmlFor="username" >Usuario</label>
                         <br/>
                         <input
@@ -92,6 +103,10 @@ class Login extends React.Component{
                         <div ref={ self => this.pass = self}> </div>
                         <br/>
                         <button id="button-inicio" type="button"onClick={this.iniciarSesion.bind(this)} >Iniciar sesión</button>
+                        <br/>
+                        <Link className="dropdown-item" to='/Signup'>
+                          <p>Regístrarte aquí</p>
+                        </Link>
                     </form>
                 </div>
 

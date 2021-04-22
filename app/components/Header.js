@@ -2,13 +2,14 @@ import React from "react";
 import personaIcono from '../assets/icons/person-circle-outline.svg';
 import corazonIcono from '../assets/icons/heart-outline.svg';
 import carritoIcono from '../assets/icons/cart-outline.svg';
+
 import {Link} from 'react-router-dom'
 
 class Header extends React.Component{
     render() {
         return(
-            <header>
-                <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+            <header id="main-header">
+                <nav className="navbar navbar-expand-lg navbar-light bg-dark" >
                     <div className="container-fluid">
                         <a className="navbar-brand text-light" href="#" >SneakerShop</a>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -63,7 +64,7 @@ class Header extends React.Component{
                             <div className="dropdown">
                                 <a className="btn btn-secondary dropdown-toggle btn btn-dark" href="#" role="button"
                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src={personaIcono} alt="" width="30" height="24"/>
+                                        <img src={personaIcono}  alt="" width="30" height="24"/>
                                 </a>
 
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">

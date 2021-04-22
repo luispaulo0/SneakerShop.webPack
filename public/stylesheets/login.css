@@ -38,6 +38,13 @@
     border-radius: 5px;
     color: #ffff;
 }
+#button-skip{
+    margin-bottom: auto;
+    background-color: #131313;
+    border-color: #131313;
+    border-radius: 10px;
+    color: #ffff;
+}
 .input{
     border-radius: 5px;
     border: 1px solid #131313;
