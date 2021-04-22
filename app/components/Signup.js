@@ -46,7 +46,9 @@ class Signup extends React.Component{
     }
     render(){
         return(
-            <section className="border border-4 border-light " id="signup">
+
+            <section className="border border-4 border-light " id="bg-color">
+                <h1 className="text-center">SneakerShop</h1>
                 <div className="container  my-5  text-white" >
                     <div className="row d-flex justify-content-center">
                         <div className="col-sm-10 col-md-8 col-lg-6 col-xl-6 border border-success bg-dark rounded-3 text-center">

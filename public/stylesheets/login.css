@@ -6,6 +6,9 @@
 #container-box{
     background-color: antiquewhite;
 }
+#bg-color{
+    background-color: antiquewhite;
+}
 .container-components{
     width: 90%;
     max-width: 600px;
