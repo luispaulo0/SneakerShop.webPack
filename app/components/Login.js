@@ -1,8 +1,9 @@
 import React from 'react'
 import update from 'immutability-helper'
 import APIInvoker from "../utils/APIInvoker";
-import carritoIcono from "../assets/icons/cart-outline.svg";
+import back from "../assets/icons/arrow-left.svg";
 import {Link} from "react-router-dom";
+import carritoIcono from "../assets/icons/cart-outline.svg";
 
 
 class Login extends React.Component{
@@ -68,11 +69,11 @@ class Login extends React.Component{
                     <h1 className="h1">SneakerShop</h1>
 
                     <form className="form" id="container-box">
-                        <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button className="btn btn-dark btn-sm me-md-2" type="button" id="button-skip">
+                        <div className="d-grid gap-2 d-md-flex justify-content-md-start" >
+                            <button className="btn btn-light btn-sm me-md-2 " type="button">
                                 <Link className="dropdown-item" to='/'>
-                                <p className="text-center text-white">Skip</p>
-                                 </Link>
+                                    <img src={back} alt="" width="30" height="24"/>
+                                </Link>
                             </button>
                         </div>
                         <br/>

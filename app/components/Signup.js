@@ -46,18 +46,18 @@ class Signup extends React.Component{
     }
     render(){
         return(
-            <section className="border border-4 border-light" id="signup">
-                <div className="container  my-5 border border-5 border-primary text-white" >
+            <section className="border border-4 border-light " id="signup">
+                <div className="container  my-5  text-white" >
                     <div className="row d-flex justify-content-center">
-                        <div className="col-sm-10 col-md-8 col-lg-6 col-xl-6 border border-success bg-secondary">
+                        <div className="col-sm-10 col-md-8 col-lg-6 col-xl-6 border border-success bg-dark rounded-3 text-center">
                             <h1 className="display-6 py-3">Registrate aqui</h1>
                         </div>
                     </div>
                     <div className="row d-flex justify-content-center">
-                        <div className="col-sm-10 col-md-8 col-lg-6 col-xl-6 border border-danger bg-secondary">
+                        <div className="col-sm-10 col-md-8 col-lg-6 col-xl-6 border border-dark bg-secondary rounded-3">
                             <form >
-                                <div className="mb-3">
-                                    <label htmlFor="nombre" className="form-label">nombre</label>
+                                <div className="mb-4">
+                                    <label htmlFor="nombre" className="form-label">Nombre</label>
                                     <input type="text"
                                            className="form-control"
                                            name="nombre"
@@ -74,7 +74,7 @@ class Signup extends React.Component{
                                     </div>
                                 </div>
                                 <div className="mb-4">
-                                    <label htmlFor="apellidoPaterno" className="form-label">apellido paterno</label>
+                                    <label htmlFor="apellidoPaterno" className="form-label">Apellido paterno</label>
                                     <input type="text"
                                            className="form-control"
                                            name="apellidoPaterno"
@@ -90,7 +90,7 @@ class Signup extends React.Component{
 
                                     </div>
                                 </div>
-                                <div className="mb-5">
+                                <div className="mb-4">
                                     <label htmlFor="username" className="form-label">Nombre de usuario</label>
                                     <input type="text"
                                            className="form-control"
@@ -108,7 +108,7 @@ class Signup extends React.Component{
 
                                     </div>
                                 </div>
-                                <div className="py-3">
+                                <div className="mb-4">
                                     <label htmlFor="password" className="form-label">Contraseña</label>
                                     <input type="password"
                                            className="form-control"
@@ -127,7 +127,7 @@ class Signup extends React.Component{
                                 </div>
 
                                 <div className="d-grid gap-3 py-3">
-                                    <button onClick={this.buttonOnClick.bind(this)} type="button" className="btn btn-primary btn-lg" >Registrar</button>
+                                    <button onClick={this.buttonOnClick.bind(this)} type="button" className="btn btn-success btn-lg" >Registrar</button>
 
                                 </div>
                             </form>
