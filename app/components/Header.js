@@ -1,7 +1,7 @@
 import React from "react";
-import personaIcono from '../assets/icons/person-circle-outline.svg';
-import corazonIcono from '../assets/icons/heart-outline.svg';
-import carritoIcono from '../assets/icons/cart-outline.svg';
+import personaIcono from '../assets/icons/person_white_24dp.svg';
+import corazonIcono from '../assets/icons/corazonBlanco.svg';
+import carritoIcono from '../assets/icons/icons8-fast-cart-64.png';
 
 import {Link} from 'react-router-dom'
 
@@ -84,7 +84,7 @@ class Header extends React.Component{
                                 </Link>
                             </button>
                             <button type="button" className="btn btn-dark">
-                                <Link className="dropdown-item" to='/ShoppingCar'>
+                                <Link className="dropdown-item" to='/Carr'>
                                     <img src={carritoIcono} alt="" width="30" height="24"/>
                                 </Link>
                             </button>

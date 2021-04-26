@@ -87,7 +87,7 @@ class Login extends React.Component{
                             placeholder="ELPEPE"
                             value={this.state.username}
                             onChange={this.changeField.bind(this)}
-                            onBlur={this.usernameValidate.bind(this)}/>
+                            />
 
                         <div  ref={ self => this.label = self}></div>
 

@@ -10,45 +10,29 @@ import img6 from"../assets/images/Tenis_Ultraboost_21_Blanco_FY0377_01_standard.
 import imgPromo from"../assets/images/lanzamientoSS-20-04.jpg"
 import imgPromo2 from"../assets/images/iv-d-homepage-1up-mtz-nike.jpg"
 import imgPromo3 from"../assets/images/adidas-disney-1844x740.jpg"
-import iconIns from "../assets/icons/instagram.svg"
-import iconWhats from "../assets/icons/brand-whatsapp.svg"
-import iconFace from "../assets/icons/facebook.svg"
 import Card from"../components/Cards"
 import  "../assets/stylesheet/Home.css"
+import Footer  from "../components/Footer";
+import APIInvoker from "../utils/APIInvoker";
 import carritoIcono from "../assets/icons/cart-outline.svg";
 class Home extends React.Component{
     constructor(props) {
         super(props);
+        this.state  = {
+            ProductList: [],
+            Imagenes:[img1, img2, img3,img4, img5, img6]
+        }
 
-        this.data = [
-            {
-                img:img1,
-                title: 'Nike Air Max 2090 EOI',
-                description: '$3300'
-            },
-            {
-                img:img2,
-                title: 'Nike Air Max VG-R',
-                description: '$2000'
-            },
-            {
-                img:img3,
-                title: 'Nike Cosmic Unity "Amalgam"',
-                description: '$3399'
-            },{
-                img:img4,
-                title: 'tennis lite racer 2.0',
-                description: '$1200'
-            },{
-                img:img5,
-                title: 'Tennis grand court base',
-                description: '$2000'
-            },{
-                img:img6,
-                title: 'Tennis ultra boost-21',
-                description: '$1800'
-            }
-        ]
+        this.status = false
+        //Extraer el catálogo de roles del backend
+        APIInvoker.invokeGET('/products/getProductos',data => {  //Entrará acá cuando status = true
+            this.setState({
+                ProductList : data.data
+            })
+        }, error => { //Entrará acá cuando status = false
+        })
+
+
     }
     render() {
         return(
@@ -95,37 +79,15 @@ class Home extends React.Component{
                 <br/>
                 <div className="container">
                     <div className="row">
-                <For each="item" index="index" of={this.data} >
+                <For each="item" index="index" of={this.state.ProductList} >
                     <div className="col-sm-6 col-md-4 col-lg-4">
-                    <Card key={index} img={item.img} title={item.title} description={item.description}/>
+                    <Card key={index} img={this.state.Imagenes[index]} title={item.nombre} description={item.precio} idProducto={item.idProducts}/>
                     </div>
                 </For>
                     </div>
                 </div>
                 <br/>
-                <footer className="bg-dark text-white">
-                    <br/>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-3 col-md-3 col-lg-2">
-                                <p>Buscar en tienda</p>
-                                <br/>
-                                <p>Registrate para recibir correos</p>
-                            </div>
-                            <div className="col-sm-3 col-md-3 col-lg-2">
-                                <p>Obtener ayuda</p>
-                            </div>
-                            <div className="col-sm-3 col-md-3 col-lg-2">
-                                <p>Acerca de SneakerShop</p>
-                            </div>
-                            <div className="col-sm-3 col-md-3 col-lg-6 text-end">
-                                <img src={iconIns} alt="" width="30" height="30"/>&nbsp;&nbsp;&nbsp;
-                                <img src={iconWhats} width="30" height="30"/>&nbsp;&nbsp;
-                                <img src={iconFace} width="30" height="30"/>&nbsp;&nbsp;&nbsp;
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <Footer/>
 
             </>
         )

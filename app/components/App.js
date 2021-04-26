@@ -3,6 +3,7 @@ import Hola from './Hola'
 import Login from './Login'
 import Signup from "./Signup";
 import Wish from "../pages/WishList";
+import Carr from "../pages/Carro"
 import ShoppingCar from "../pages/ShoppingCar";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
@@ -19,6 +20,8 @@ class App extends React.Component{
                         <Route exact path='/Signup' component={Signup}/>
                         <Route exact path='/WishList' component={Wish}/>
                         <Route exact path='/ShoppingCar' component={ShoppingCar}/>
+                        <Route exact path='/Carr' component={Carr}/>
+
                         <Route component={NotFound}/>
                     </Switch>
                 </BrowserRouter>
